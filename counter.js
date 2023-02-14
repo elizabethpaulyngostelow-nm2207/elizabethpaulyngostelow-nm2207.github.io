@@ -8,7 +8,7 @@ function count() {
   counter++;
 
   if (counter % 10 === 0) {
-    alert("Mouse would like to thank you for the food 🥙");
+    alert("Mouse is now your friend, he likes the food alot! 🥙");
   }
 
   document.querySelector(".counter").innerHTML = counter;
