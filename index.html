@@ -1,16 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>My NM2207 GitHub Portfolio</title>
-    <script src="scripts/counter.js"></script>
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
-  <body>
-    <h1>Hello world! 🚀</h1>
-    <h2>This is a site hosted on GitHub Pages.</h2>
-    <h3>Here's a hungry mouse. Please feed him!</h3>
-    <h3 class="mouse">🐁</h3>
-    <h3>Food counter: <span class="counter">0</span> 🥙</h3>
-    <button>Feed!</button>
-  </body>
+<head>
+   <title>Week 9 NM2207 Web Page Submission </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+    <script defer type="text/javascript" src="appscripts/project.js"></script>
+</head>
+<body style="font-family:TrebuchetMS">
+<!--Placing an image at the top of my webpage-->
+  <img src="namcha-ph-3ndKC86gi78-unsplash.jpg" alt="Picture of Singapore cityscape with people walking" style="width:100%;" >
+  
+<h1 style="color: rgb(62, 123, 133); font-family:TrebuchetMS; text-align: center">Examining Singaporean youth's attitudes and social tolerance towards serious mental illness </h1>
+<br>
+
+<!--Here will lie the text for the introduction of the data story, explaining things like the state of youth attitudes towards mental illness and how this data story is a retrospective look since its data is from 2017. How have we progressed since then? The story will invite readers to think about this.-->
+<p style="color:black; font-family:TrebuchetMS">The problem is that even up till today and despite increasing awareness of mental illness and their effects on individuals, there are still prevalent negative attitudes towards those with mental illness among youth, a demographic which represents the future of Singapore. From the data visualisation, readers will understand that there are many negative associations that show the problem of the stigma attached with mental illness – for example, viewing people with such illnesses as undesirable to be around. 
+ <br><br> Temporary placeholder text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate neque ut risus rhoncus vehicula. Praesent feugiat malesuada rhoncus. Vivamus porttitor gravida leo, accumsan ultricies orci semper a. Sed aliquam mi id felis semper fermentum. Quisque ac magna tincidunt magna ornare rhoncus. Duis nec mollis augue, vitae gravida purus. Etiam fermentum lacus turpis, sit amet congue ligula ornare nec. Cras vestibulum tellus vel feugiat porttitor.</p>
+
+<br>
+
+<h2 style="font-family:TrebuchetMS;">Section A: Sociodemographic breakdown of sample</h2>
+
+<!--First donut chart showing the sociodemographic breakdown of the sample by gender -->
+<canvas id="myFirstDonutChart" style="width:100%;max-width:600px"></canvas> 
+
+<!--For the second and third donut charts, I plan to find a way to make them show up on clicking buttons ('See second dataset' and 'See third dataset' buttons) such that the first donut chart disappears and is replaced by the second or third donut chart.
+I may thus plan to make only one of the three donut charts to be visible at one time in the final webpage.-->
+
+<!--Second donut chart showing the sociodemographic breakdown of the sample by nationality-->
+<canvas id="mySecondDonutChart" style="width:100%;max-width:600px"></canvas>
+
+<!--Third donut chart showing the sociodemographic breakdown of the sample by ethnicity-->
+<canvas id="myThirdDonutChart" style="width:100%;max-width:600px"></canvas>
+
+<!-- The three donut charts will be resized to each be bigger if I decide to make it such that only one donut chart can be seen at one time.-->
+
+<!-- Here is the code for the 2 buttons I plan to change in my final project such that when they are clicked, they show the corresponding donut chart. (They will not be showing the time)-->
+
+<!--Button ('See second dataset')-->
+<button id="myBtn" type="button">See second dataset</button>
+<p id="demo"></p>
+
+<!--Button ('See third dataset')-->
+<button id="mySecondBtn" type="button">See third dataset</button>
+<p id="demo"></p>
+
+<p>
+  <!--Text explaining how the paper was conducted and an explanation of the data.-->
+  (Draft text) The paper conducted an online survey from which 940 responses were used for analysis. Here, for introductory context, we see the sociodemographic breakdown of the survey sample from the research paper by gender, nationality and ethnicity. What do these survey respondents think about mental illness? 
+</p>
+
+<br><br><br>
+
+<h2 style="font-family:TrebuchetMS;">Section B: Survey responses</h2>
+<br>
+
+<!--Vertical bar chart showing the frequency of the top five most common words associated with the term mental illness-->
+<canvas id="myVerticalChart" width=1000 height=250 ></canvas>
+
+<p>
+<!--More text explaining the narrative in a way that relates to the data being visualised (the vertical bar chart) -->
+
+(Draft text) What words come to your mind when you think of the term 'mental illness?' From the survey responses, we can see how the stigma tied with mental illness is evident, with negative connotations like being uncontrolled and an outcast emanating from the common words associated with this term. But let us 
+find out more in-depth about specific opinions held by these respondents. Do you agree with any of the statements in the bar chart below or know anyone who would?
+
+</p>
+
+<br><br>
+
+<!--Horizontal bar chart showing the number of students who replied Agree or Strongly agree to survey items (certain statements/opinions)-->
+<canvas id="myHoriChart" width="1200" height="600"></canvas>
+
+<br><br>
+
+<br>
+
+<h2 style="font-family:TrebuchetMS">PCA analyses according to various loadings</h2>
+
+<p> <!-- More text to indicate that the web page is moving from to the third section of PCA analyses.-->
+  So now we that we have seen the survey results, let us move on to their analysis. What do they say about the correlations between different variables?
+  </p>
+
+<!--Tooltip in CSS that helps the reader see the more technical definition of PCA analysis when hovering over the text "What is PCA analysis?"" The definition might be changed later in order 
+  to make it more understandable to a general audience.-->
+  <div class="tooltip">What is PCA analysis?
+    <span class="tooltiptext">PCA is a technique for reducing the dimensionality of such datasets, increasing interpretability but at the same time minimizing information loss.</span>
+  </div>
+
+
+
+<br><br>
+
+<h3>Toggle between ATSMI-AV and Social Tolerance Scale varimax rotations</h3>
+<!-- I may change this header to a text that sounds more general-audience friendly instead of using words like 'varimax rotations'.-->
+  <section>
+    <button class="btn btn-link btn-toggle-chart">Toggle Chart</button>
+  
+    <div class="row chart" id="chart1">
+      <canvas id="first-chart" width="1000" height="400"></canvas> 
+      <canvas id="second-chart" width="1000" height="400"></canvas>
+      <canvas id="third-chart" width="1000" height="400"></canvas> 
+      <canvas id="fourth-chart" width="1000" height="400"></canvas> 
+      <canvas id="fifth-chart" width="1000" height="400"></canvas>
+    </div>
+    
+    <div class="row chart hide" id="chart2">
+      <canvas id="sixth-chart" width="1000" height="400"></canvas> 
+      <canvas id="seventh-chart" width="1000" height="400"></canvas> 
+    </div>
+  </section>
+
+  
+<br>
+
+<!--Conclusion of data story with text prompting reader to think of how attitudes have evolved into present day and how we might move forward towards the goal of further destigmatisation of mental illness.-->
+<p>
+(Draft text) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate neque ut risus rhoncus vehicula. Praesent feugiat malesuada rhoncus. Vivamus porttitor gravida leo, accumsan ultricies orci semper a. Sed aliquam mi id felis semper fermentum. Quisque ac magna tincidunt magna ornare rhoncus. Duis nec mollis augue, vitae gravida purus. Etiam fermentum lacus turpis, sit amet congue ligula ornare nec. Cras vestibulum tellus vel feugiat porttitor 
+</p>
+
+<br>
+<!-- Link to the original paper-->
+<a href="https://bmjopen.bmj.com/content/bmjopen/7/10/e016432.full.pdf">Read the original paper here.</a>
+
+<br> <br> <br>
+
+<!--Feedback form that will prompt users to answer whether they found the data story insightful and write an optional message before 'submitting' their answers via the submit button (which currently does not submit to anywhere).-->
+<h2 style="font-family:TrebuchetMS; color:rgb(62, 123, 133)" >Feedback Form</h2>
+<p style="font-weight:bold">Was this data story insightful?</p>
+
+<form>
+<input type="radio" id="html" name="answer" value="Yes">
+<label for="yeah">Yes</label><br>
+<input type="radio" id="css" name="answer" value="No">
+<label for="nah">No</label><br>
+</form> 
+
+<br>
+<form action="">
+  <label for="fname" style="font-weight: bold">Message:</label><br>
+  <input type="text" size="200" id="message" name="message" value=""><br>
+<br>
+  <input type="submit" value="Submit" style="font-family:TrebuchetMS; background-color: lightblue; border-radius: 8px;
+  width: 15%;">
+</form> 
+  
+ <br> 
+
+ <!--
+  Additional Resources section of website presented in a table. I thought this would be a nice addition to the data story as readers could become more informed about mental health and mental illnesses in general. 
+  The columns under the Website header will have links to such websites.
+  The columns under the About header will have text describing basic information about the websites in the left column e.g. what kind of support they offer, what you can find out from their websites etc.
+-->
+  <table>
+    <h2 style="font-family:TrebuchetMS; color:rgb(62, 123, 133)" >Additional Resources</h2>
+    <tr>
+      <th>Website</th>
+      <th>About</th>
+    </tr>
+    <tr>
+      <td><p><a href="https://www.samhealth.org.sg/" style="font-family:TrebuchetMS">Singapore Association for Mental Health</a></p></td>
+      <td style="font-family:TrebuchetMS" >SAMH was established in etc etc. and it aims to etc etc.</td>
+    </tr>
+    <tr>
+      <td><p><a href="https://www.mindline.sg/" style="font-family:TrebuchetMS" >Mindline</a></p></td>
+      <td style="font-family:TrebuchetMS" >Mindline offers support and resources such as etc. etc.</td>
+    </tr>
+    <tr>
+      <td><p><a href="https://www.healthhub.sg/programmes/186/MindSG/Discover" style="font-family:TrebuchetMS" >Health Hub -- MindSG</a></p></td>
+      <td style="font-family:TrebuchetMS">Description</td>
+    </tr>
+  
+  </table>
+  
+  
+</body>
 </html>
