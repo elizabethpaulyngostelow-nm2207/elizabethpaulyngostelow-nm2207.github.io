@@ -1,0 +1,91 @@
+/* Creating margins for my web page'e entire body so that it doesn't appear crammed to the sides and difficult to read */
+body {margin: 30px;padding:0}
+
+/* Aligning text to center for h2 headings */
+h2 {text-align: center;}
+
+/*Centering charts */
+canvas{
+    margin: 0 auto;
+    }
+
+
+/* PCA analysis tooltip */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px solid black;
+      font-size: 16px;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 400px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      font-size: 16px;
+      font-weight: normal;
+      
+      /* Positioning the tooltip */
+      position: absolute;
+      z-index: 1;
+      top: -80%;
+      left: 185%;
+      margin-left: -125px;
+      
+      
+      /* Fade in tooltip - takes 1 second to go from 0% to 100% opacity: */
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+/*Styling for table*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: separate;
+  border-spacing: 1px;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid lightcyan;
+  text-align: left;
+  padding: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: lightblue;
+}
+
+tr:nth-child(odd) {
+    background-color: lightcyan;
+
+}
+
+/*Styling for buttons*/
+button {
+    background-color: lightblue;
+    border-radius: 8px;
+    width: 15%;
+}
+
+/*Code for toggle button*/
+.hide {
+  display: none !important
+}
+
+
+/* I might explore different background colours for my web page for my final submission but I am keeping it to White as of now (Week 9).
+
+
+
+
+
