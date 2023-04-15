@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Week 9 NM2207 Web Page Submission </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+    <script defer type="text/javascript" src="appscripts/project.js"></script>
+</head>
+<body style="font-family:TrebuchetMS">
+<!--Placing an image at the top of my webpage-->
+  <img src="namcha-ph-3ndKC86gi78-unsplash.jpg" alt="Picture of Singapore cityscape with people walking" style="width:100%;" class="center" >
+  
+<h1 style="color: rgb(62, 123, 133); font-family:TrebuchetMS; text-align: center">Examining Singaporean youth's attitudes and social tolerance towards serious mental illness </h1>
+<br>
+
+<!--Text for the introduction of the data story.-->
+<p style="color:black; font-family:TrebuchetMS">
+  Have you ever heard an insult towards someone because of their mental illness? 
+  <br><br>
+  While Singapore has made strides in progress over the years regarding the availability of treatments surrounding mental illness as well as avenues of support for mentally ill individuals and their loved ones, a glaring problem still remains.
+  <br><br>
+  How might we visualise this? Let us take a look at the data from a research paper conducted in 2017 on Singaporean youths’ attitudes towards mental illness – Stigma among Singaporean youth: a cross-sectional study on adolescent attitudes towards serious mental illness and social tolerance in a multiethnic population.
+
+<br><br>
+
+<h2 style="font-family:TrebuchetMS;">Section A: Sociodemographic breakdown of sample</h2>
+
+<table>
+  <tr>
+    <!--First donut chart showing the sociodemographic breakdown of the sample by gender -->
+    <th style="width:30%"><canvas id="myFirstDonutChart" style="width:100%;max-width:300px"></canvas> </th>
+    <!--Second donut chart showing the sociodemographic breakdown of the sample by nationality-->
+    <th style="width:30%"><canvas id="mySecondDonutChart" style="width:100%;max-width:300px"></canvas></th>
+    <!--Third donut chart showing the sociodemographic breakdown of the sample by ethnicity-->
+    <th style="width:30%"><canvas id="myThirdDonutChart" style="width:100%;max-width:300px"></canvas></th>
+  </tr>
+</table>
+
+<p>
+  <!--Text explaining how the paper was conducted and an explanation of the data.-->
+  The paper conducted an online survey from which 940 responses were used for analysis. For background context, the survey respondents from the research were primarily youths with a wide variety of identities as seen from this socio-demographic breakdown by gender, nationality and ethnicity.
+<br><br>
+With youths representing the direction in which society is moving in, they encapsulate emerging societal values. So just what do youths think about mental illness? Let us delve into the survey responses and find out.
+</p>
+
+<br><br><br>
+
+<h2 style="font-family:TrebuchetMS;">Section B: Survey responses</h2>
+<br>
+
+<!--Vertical bar chart showing the frequency of the top five most common words associated with the term mental illness-->
+<canvas id="myVerticalChart" width=1000 height=250 ></canvas>
+
+<p>
+<!--More text explaining the narrative in a way that relates to the data being visualised (the vertical bar chart) -->
+What words come to your mind when you think of the term 'mental illness?' From the above chart, the negative stigma associated with mental illness is evident, with negative connotations like being uncontrolled and an outcast emanating from the common words associated with this term. But let us find out more in-depth about specific opinions held by these respondents. Do you agree with any of the statements in the bar chart below or know anyone who would?
+</p>
+
+<br><br>
+
+<!--Horizontal bar chart showing the number of students who replied Agree or Strongly agree to survey items (certain statements/opinions)-->
+<canvas id="myHoriChart" width="1200" height="600"></canvas>
+
+<br><br><br>
+
+<h2 style="font-family:TrebuchetMS">Section C: PCA analyses according to various loadings</h2>
+
+<p> <!-- More text to indicate that the web page is moving from to the third section of PCA analyses.-->
+  Now that we have digested the survey results, let us move on to their analysis. What do they say about the correlations between different variables?
+</p>
+
+<!--Tooltip in CSS that helps the reader see the more technical definition of PCA analysis when hovering over the text "What is PCA analysis?""-->
+  <div class="tooltip">What is PCA analysis?
+    <span class="tooltiptext">PCA is a technique for reducing the dimensionality of such datasets, increasing interpretability but at the same time minimizing information loss.</span>
+  </div>
+
+<br><br>
+
+<p>To see the results, click the Toggle Chart button to toggle between the Attitudes Towards Serious Mental Illness: Adolescent Version (ATSMI-AV) and Social Tolerance Scale varimax rotations. The paper utilised these two scales in order to delve into factor structures under the general umbrella of youth stigma.
+</p>
+  <section>
+    <!--Toggle chart button -->
+    <button class="btn btn-link btn-toggle-chart">Toggle Chart</button>
+  
+    <div class="row chart" id="chart1">
+
+      <div class="center">
+      <h2> ATSMI-AV</h2>
+      </div>
+
+      <canvas id="first-chart" width="1000" height="400"></canvas> 
+      <br>
+      <canvas id="second-chart" width="1000" height="400"></canvas>
+      <br>
+      <canvas id="third-chart" width="1000" height="400"></canvas> 
+      <br>
+      <canvas id="fourth-chart" width="1000" height="400"></canvas> 
+      <canvas id="fifth-chart" width="1000" height="400"></canvas>
+    </div>
+    
+    <div class="row chart hide" id="chart2">
+
+      <div class="center">
+        <h2>Social Tolerance Scale</h2>
+        </div>
+
+      <canvas id="sixth-chart" width="1000" height="400"></canvas> 
+      <canvas id="seventh-chart" width="1000" height="400"></canvas> 
+    </div>
+  </section>
+
+<br>
+
+<!--Conclusion of data story.-->
+<p>
+  All in all, while a retrospective look, what has changed from 2017 till regarding our emotional responses towards mental illnesses? To progress forward, we need to think about how our attitudes impact mentally ill individuals and their loved ones. Perhaps then there will be more hope for Singapore society to be one characterised by empathy and for the youths of today to become compassionate ambassadors of tomorrow.
+</p>
+
+<br>
+<!-- Link to the original paper-->
+<a href="https://bmjopen.bmj.com/content/bmjopen/7/10/e016432.full.pdf">Read the original paper here.</a>
+
+<br> <br> <br>
+
+<!--Feedback form that will prompt users to answer whether they found the data story insightful and write an optional message before 'submitting' their answers via the submit button. Due to the obvious constraint of not having a server for processing the answers, this mostly for show.-->
+<h2 style="font-family:TrebuchetMS; color:rgb(62, 123, 133)" >Feedback Form</h2>
+<p style="font-weight:bold">Was this data story insightful?</p>
+
+<!--Radio buttons-->
+<form>
+<input type="radio" id="html" name="answer" value="Yes">
+<label for="yeah">Yes</label><br>
+<input type="radio" id="css" name="answer" value="No">
+<label for="nah">No</label><br>
+</form> 
+
+<!--Message box-->
+<br>
+<form action="">
+  <label for="fname" style="font-weight: bold">Message:</label><br>
+  <input type="text" size="200" id="message" name="message" value=""><br>
+<br>
+  <input type="submit" value="Submit" style="font-family:TrebuchetMS; background-color: lightblue; border-radius: 8px;
+  width: 15%;">
+</form> 
+  
+ <br> 
+
+ <!--
+  Additional Resources section of website presented in a table. I thought this would be a nice addition to the data story as readers could become more informed about mental health and mental illnesses in general. 
+  The columns under the Website header will have links to such websites.
+  The columns under the About header will have text describing basic information about the websites in the left column e.g. what kind of support they offer, what you can find out from their websites etc.
+-->
+  <table>
+    <h2 style="font-family:TrebuchetMS; color:rgb(62, 123, 133)" >Additional Resources</h2>
+    <p>Click any of the hyperlinks below to find out more about mental illnesses as well as mental health in general.</p>
+    <tr>
+      <th>Website</th>
+      <th>About</th>
+    </tr>
+    <tr>
+      <td><p><a href="https://www.samhealth.org.sg/" style="font-family:TrebuchetMS">Singapore Association for Mental Health</a></p></td>
+      <td style="font-family:TrebuchetMS" >Established in 1968, SAMH offers a wide multitude of community mental health initiatives for mentally ill individuals to rejuvenate their lives as well as to encourage a general sense of mental wellbeing. SAMH also reaches out to the loved ones of individuals with mental illness to give holistic support.</td>
+    </tr>
+    <tr>
+      <td><p><a href="https://www.mindline.sg/" style="font-family:TrebuchetMS" >Mindline</a></p></td>
+      <td style="font-family:TrebuchetMS" >Mindline is a platform that welcomes and encourages everyone to seek help for mental health, offering an extensive array of resources such as self-assessment tools, self-care exercises, an AI chat to share what you are feeling and other external resources tailored by categories like caregiving or financial support. Mindline aims to banish the stigma surrounding mental illness and mental health.</td>
+    </tr>
+    <tr>
+      <td><p><a href="https://www.healthhub.sg/programmes/186/MindSG/Discover" style="font-family:TrebuchetMS" >Health Hub: MindSG</a></p></td>
+      <td style="font-family:TrebuchetMS">Health Hub MindSG provides a curated selection of resources on topics such as what mental well-being is as well as how to care for others and ourselves. Dispelling myths such as the weakness of reaching out for help, MindSG aims to clarify common misunderstandings and encourage readers to take charge of their own mental health.</td>
+    </tr>
+  
+  </table>
+  
+  
+</body>
+</html>
