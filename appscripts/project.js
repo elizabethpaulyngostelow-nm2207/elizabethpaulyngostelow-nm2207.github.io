@@ -2,8 +2,7 @@
 var xValues = ["Females", "Males"];
 var yValues = [443,497];
 var barColors = [
-  "#b91d47",
-  "#00aba9",
+  "darkblue", "cornflowerblue"
 ];
 
 new Chart("myFirstDonutChart", {
@@ -28,11 +27,7 @@ new Chart("myFirstDonutChart", {
 var xValues = ["Singaporean citizen", "Permanent resident"];
 var yValues = [805,135];
 var barColors = [
-  "#b91d47",
-  "#00aba9",
-  "#2b5797",
-  "#e8c3b9",
-  "#1e7145"
+  "navy","lightblue"
 ];
 
 new Chart("mySecondDonutChart", {
@@ -57,11 +52,7 @@ new Chart("mySecondDonutChart", {
 var xValues = ["Chinese", "Malay", "Indian", "Other"];
 var yValues = [773,41,75,51];
 var barColors = [
-  "#b91d47",
-  "#00aba9",
-  "#2b5797",
-  "#e8c3b9",
-  "#1e7145"
+  "cornflowerblue","navy","lightblue","dodgerblue"
 ];
 
 new Chart("myThirdDonutChart", {
@@ -82,27 +73,10 @@ new Chart("myThirdDonutChart", {
 });
 
 
-/*Code for the two buttons underneath the three DONUT CHARTS in order to see the different datasets. Currentlly, they show the date on click, but the final buttons are meant to switch
-between the three donut charts. */
-
-document.getElementById("myBtn").addEventListener("click", displayDate);
-
-function displayDate() {
-  document.getElementById("demo").innerHTML = Date();
-}
-
-document.getElementById("mySecondBtn").addEventListener("click", displayDate);
-  
-function displayDate() {
-  document.getElementById("demo").innerHTML = Date();
-}
-
-
 //Code for vertical bar chart on the frequency of the top five most common words associated with the term 'mental illness'//
 var xValues = ["Depression/Depressed", "Crazy", "Different", "Weird", "Autism/Autistic"];
 var yValues = [190,176,149,123,93];
-//I will change the colours to fit the colour scheme for my final submission.//
-var barColors = ["red", "green","blue","orange","brown"]; 
+var barColors = ["darkblue", "cornflowerblue","navy","lightblue","darkslateblue"]; 
 
 new Chart("myVerticalChart", {
   type: "bar",
@@ -162,13 +136,13 @@ var xValues =
 
 var yValues = [213, 330, 434, 211, 126, 132, 280, 169, 98, 33, 330, 586, 322, 315, 265, 191, 186, 103, 122, 283, 224, 137, 140, 786, 149, 604, 366, 150, 842, 822, 736, 490];
 var barColors = [
-//I will change the colours to be more differentiated and fit the colour scheme for my final submission.//
-  "red", "green","blue","orange","brown", "rgb(200,100,200)",
-  "red", "green","blue","orange","brown", "rgb(200,100,200)",
-  "red", "green","blue","orange","brown", "rgb(200,100,200)",
-  "red", "green","blue","orange","brown", "rgb(200,100,200)",
-  "red", "green","blue","orange","brown", "rgb(200,100,200)",
-  "red", "green"
+"darkblue", "cornflowerblue","navy","lightblue","darkslateblue",
+"darkblue", "cornflowerblue","navy","lightblue","darkslateblue",
+"darkblue", "cornflowerblue","navy","lightblue","darkslateblue",
+"darkblue", "cornflowerblue","navy","lightblue","darkslateblue",
+"darkblue", "cornflowerblue","navy","lightblue","darkslateblue",
+"darkblue", "cornflowerblue","navy","lightblue","darkslateblue",
+"darkblue", "cornflowerblue"
 ];
 
 new Chart("myHoriChart", {
@@ -204,12 +178,12 @@ var data = {
     label: 'My First Dataset',
     data: [0.79,0.78,0.73,0.5],
     fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(135,206,250,0.2)',
+    borderColor: 'rgb(35,206,250)',
+    pointBackgroundColor: 'rgb(35,206,250)',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(255, 99, 132)'
+    pointHoverBorderColor: 'rgb(35, 206, 250)'
   }, {
 
   }]
@@ -226,7 +200,7 @@ new Chart("first-chart",
               },
               title: {
                   display: true,
-                  text: ['1: Physical Threat'],//set this to 'Something'
+                  text: ['1: Physical Threat'],
                   fontFamily: "TrebuchetMS",
                   fontSize: 20,
                   fontColor: 'rgb(0,0,0)',
@@ -247,12 +221,12 @@ new Chart("first-chart",
       label: 'My First Dataset',
       data: [0.74,0.66,0.75,0.75],
       fill: true,
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgb(255, 99, 132)',
-      pointBackgroundColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgba(176,224,230, 0.2)',
+      borderColor: 'rgb(176,224,230)',
+      pointBackgroundColor: 'rgb(176,224,230)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgb(255, 99, 132)'
+      pointHoverBorderColor: 'rgb(176,224,230)'
     }, {
 
     }]
@@ -269,7 +243,7 @@ new Chart("second-chart",
                 },
                 title: {
                     display: true,
-                    text: ['2: Wishful Thinkinig'],//set this to 'Something'
+                    text: ['2: Wishful Thinkinig'],
                     fontFamily: "TrebuchetMS",
                     fontSize: 20,
                     fontColor: 'rgb(0,0,0)',
@@ -291,12 +265,12 @@ var data = {
     label: 'My First Dataset',
     data: [0.65, 0.64, 0.62, 0.58],
     fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(100,149,237, 0.2)',
+    borderColor: 'rgb(100,149,237)',
+    pointBackgroundColor: 'rgb(100,149,237)',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(255, 99, 132)'
+    pointHoverBorderColor: 'rgb(100,149,237)'
   }, {
 
   }]
@@ -314,7 +288,7 @@ new Chart("third-chart",
               },
               title: {
                   display: true,
-                  text: ['3: Categorical Thinking'],//set this to 'Something'
+                  text: ['3: Categorical Thinking'],
                   fontFamily: "TrebuchetMS",
                   fontSize: 20,
                   fontColor: 'rgb(0,0,0)',
@@ -334,12 +308,12 @@ var data = {
     label: 'My First Dataset',
     data: [0.63, 0.75, 0.72],
     fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(30,144,255, 0.2)',
+    borderColor: 'rgb(30,144,255)',
+    pointBackgroundColor: 'rgb(30,144,255)',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(255, 99, 132)'
+    pointHoverBorderColor: 'rgb(30,144,255)'
   }, {
 
   }]
@@ -357,7 +331,7 @@ new Chart("fourth-chart",
               },
               title: {
                   display: true,
-                  text: ['4: Label Avoidance'],//set this to 'Something'
+                  text: ['4: Label Avoidance'],
                   fontFamily: "TrebuchetMS",
                   fontSize: 20,
                   fontColor: 'rgb(0,0,0)',
@@ -377,12 +351,12 @@ var data = {
     label: 'My First Dataset',
     data: [0.63, 0.75, 0.72],
     fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(65,105,225, 0.2)',
+    borderColor: 'rgb(65,105,225)',
+    pointBackgroundColor: 'rgb(65,105,225)',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(255, 99, 132)'
+    pointHoverBorderColor: 'rgb(65,105,225)'
   }, {
 
   }]
@@ -400,7 +374,7 @@ new Chart("fifth-chart",
               },
               title: {
                   display: true,
-                  text: ['5: Social Construction/Concern'],//set this to 'Something'
+                  text: ['5: Social Construction/Concern'],
                   fontFamily: "TrebuchetMS",
                   fontSize: 20,
                   fontColor: 'rgb(0,0,0)',
@@ -424,12 +398,12 @@ var data = {
     label: 'My First Dataset',
     data: [0.79,0.78,0.77,0.74,0.61,0.51],
     fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(30,144,255,0.2)',
+    borderColor: 'rgb(30,144,255)',
+    pointBackgroundColor: 'rgb(30,144,255)',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(255, 99, 132)'
+    pointHoverBorderColor: 'rgb(230,144,255)'
   }, {
 
   }]
@@ -447,7 +421,7 @@ new Chart("sixth-chart",
               },
               title: {
                   display: true,
-                  text: ['6: Social Distance'],//set this to 'Something'
+                  text: ['6: Social Distance'],
                   fontFamily: "TrebuchetMS",
                   fontSize: 20,
                   fontColor: 'rgb(0,0,0)',
@@ -469,12 +443,12 @@ var data = {
     label: 'My First Dataset',
     data: [0.81,0.80,0.70,0.58,0.50],
     fill: true,
-    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-    borderColor: 'rgb(255, 99, 132)',
-    pointBackgroundColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(0,0,205, 0.2)',
+    borderColor: 'rgb(0,0,205)',
+    pointBackgroundColor: 'rgb(0,0,205)',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(255, 99, 132)'
+    pointHoverBorderColor: 'rgb(0,0,205)'
   }, {
 
   }]
@@ -492,22 +466,13 @@ new Chart("seventh-chart",
               },
               title: {
                   display: true,
-                  text: ['7: Social Responsibility'],//set this to 'Something'
+                  text: ['7: Social Responsibility'],
                   fontFamily: "TrebuchetMS",
                   fontSize: 20,
                   fontColor: 'rgb(0,0,0)',
               }
           }
       });
-
-
-//Submit button confirm box popup
-function myFunction() {
-  confirm("Submit your answers?");
-  document.getElementById("enterName").value = "";
-}
-
-
 
 //Code for toggle button in order to toggle between the different varimax rotations (and show different sets of RADAR CHARTS)
 const toggleBtn = document.querySelector(".btn-toggle-chart");
